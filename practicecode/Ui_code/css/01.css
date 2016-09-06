@@ -1,0 +1,45 @@
+body {
+background-color: #fff;
+border-radius: 3px;
+border: 1px solid #ccc;
+box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+color: #000;
+font-family: Helvetica, Arial, sans-serif;
+}
+h1, h2, h3 {
+margin-bottom: .2em;
+}
+.poem {
+margin: 0 2em;
+}
+.highlight {
+background-color: yellow;
+border: 1px solid red;
+font-style: italic;
+margin: 0.5em 0;
+padding: 0.5em;
+}
+.horizontal {
+float: left;
+list-style: none;
+margin: 10px;
+}
+tr {
+background-color: #fff;
+}
+.alt {
+background-color: #ccc;
+}
+#container {
+    position: fixed;
+    width: 340px;
+    height: 280px;
+    top: 50%;
+    left: 50%;
+    margin-top: -140px;
+    margin-left: -170px;
+	background: #fff;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/01.css">
+        <script src="/Ui_code/js/jquery.js"></script>
+        <script src = "/Ui_code/js/angular.min.js"></script>
+        <script src = "/Ui_code/js/hello.js"></script>
+    </head>
+    <body ng-app="myapp">
+
+        <div id ="container" ng-controller="MyController" >
+            <form>
+                <input type="text" name="name" ng-model="myForm.name" ng-minlength="5" ng-maxlength="25"> Name <br/>
+                <input type="text" name="address" ng-model="myForm.address" ng-minlength="5" ng-maxlength="25"> Address <br/>
+                <input type="text" name="home_phone" ng-model="myForm.home_phone" ng-minlength="5" ng-maxlength="10"> Home Phone <br/>
+                <input type="text" name="work_phone" ng-model="myForm.work_phone"  ng-minlength="5" ng-maxlength="10"> Work Phone <br/>
+                <input type="button" value="Submit" ng-click="myForm.submittheForm()">
+            </form>
+        </div>
+
+        <script>
+            angular.module("myapp", [])
+                    .controller("MyController", function($scope, $http) {
+                        $scope.myForm = {};
+
+                    $scope.myForm.submittheForm = function(){
+                        var dataObject = {
+                             name : $scope.myForm.name,
+                             address    : $scope.myForm.address,
+                             home_phone : $scope.myForm.home_phone,
+                             work_phone : $scope.myForm.work_phone
+                        };
+
+                        dataObject = angular.toJson(dataObject);
+                        var responsePromise = $http.post("http://127.0.0.1:8000/user", dataObject, {});
+                        responsePromise.success(function(dataFromServer, status, headers, config) {
+                            console.log(dataFromServer.status);
+                        });
+                    }
+
+                    } );
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+
+   <head>
+      <title>AngularJS First Application</title>
+       <script src="Ui_code/js/jquery.js"></script>
+        <script src="Ui_code/js/angular.min.js"></script>
+        <script src="Ui_code/js/hello.js"></script>
+   </head>
+
+   <body ng-app = "myApp">
+      <h1>Sample Application</h1>
+      <div ng-controller="AddressInfoController">
+            <ul>
+                <li ng-repeat="user in address" >
+                    <a href="javascript:void(0)" ng-click="displayInfo()">{{user.name}}</a>
+                </li>
+            </ul>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE>Address Book Search Forms</TITLE>
+</HEAD>
+<BODY>
+<H1>WWW Address Manager</H1>
+<P>Enter search values in any field.
+<PRE><HR>
+<FORM METHOD=POST
+ACTION="">
+<P><B>Name:</B>
+<INPUT TYPE="text" NAME="Name" SIZE=40>
+<P><B>Address:</B>
+<INPUT TYPE="text" NAME="Address" SIZE=40>
+<P><B>Home Phone:</B>
+<INPUT TYPE="text" NAME="Hphone" SIZE=40>
+<P><B>Work Phone:</B>
+<INPUT TYPE="text" NAME="Wphone" SIZE=40>
+<P><B>Email Address:</B>
+<INPUT TYPE="text" NAME="Email" SIZE=40>
+<P><B>Home Page: </B>
+<INPUT TYPE="text" NAME="WWW" SIZE=40>
+</PRE>
+<INPUT TYPE="submit" VALUE="Add">
+<INPUT TYPE="reset" VALUE="Clear">
+
+<HR>
+</FORM>
+</BODY>
+</HTML>
+Id: <span ng-bind="address.id"></span>
+<br/>
+Name:  <input type="text" ng-model="address.name" />
+<br/>
+Home Phone: <input type="text" ng-model="address.home_phone" />
+<br/>
+Work Phone: <input type="text" ng-model="address.work_phone" />
+</br>
+//<a ng-click=><li ng-repeat="user in address">{{user.name}}</li></a>
